@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Majdoulin</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffebcd;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff69b4;
+            margin-top: 50px;
+        }
+        .flashcard {
+            background-color: #fff;
+            border: 2px solid #ff69b4;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .flashcard:hover {
+            transform: scale(1.05);
+        }
+        .hidden {
+            display: none;
+        }
+        .flashcard p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉🎉🎉 Happy Birthday Majdoulin 🎉🎉🎉</h1>
+
+    <div class="flashcard" onclick="showMessage(0)">
+        <p class="hidden">I wish you all the best in life!</p>
+        <p>Click me!</p>
+    </div>
+
+    <div class="flashcard" onclick="showMessage(1)">
+        <p class="hidden">May all your dreams come true!</p>
+        <p>Click me!</p>
+    </div>
+
+    <div class="flashcard" onclick="showMessage(2)">
+        <p class="hidden">Here's to another year of happiness!</p>
+        <p>Click me!</p>
+    </div>
+
+    <div class="flashcard" onclick="showMessage(3)">
+        <p class="hidden">Wishing you best moments and happiness and well being today and always!</p>
+        <p>Click me!</p>
+    </div>
+
+    <div class="flashcard" onclick="showMessage(4)">
+        <p class="hidden">Hope this year brings you joy and success!</p>
+        <p>Click me!</p>
+    </div>
+
+    <div class="flashcard" onclick="showMessage(5)">
+        <p class="hidden">Inshallah b njeh w tawfi9 w rabi ysahelk fi kom mahu s3ib!</p>
+        <p>Click me!</p>
+    </div>
+
+    <script>
+        function showMessage(index) {
+            const flashcards = document.querySelectorAll('.flashcard p');
+            flashcards[index * 2].classList.toggle('hidden'); // Show the message
+            flashcards[index * 2 + 1].classList.toggle('hidden'); // Hide "Click me"
+        }
+    </script>
+    
+</body>
+</html>
